@@ -5,4 +5,4 @@ import classNames from "classnames";
 var classname = classNames('tiles', { bar: false }); 
 
 export default ({ value, unit }) => <div className={classname}>
-<h2><strong>{value}</strong>%</h2></div>
+<h2><strong>{value}</strong>%!</h2></div>
