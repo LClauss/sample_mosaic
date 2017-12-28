@@ -1,0 +1,20 @@
+{
+  "name": "sample-mosaic",
+  "description": "",
+  "version": "0.0.26",
+  "dependencies": {
+    "react-mosaic-component": "1.0.3",
+    "react-dom": "16.2.0",
+    "react": "16.2.0",
+    "classnames": "2.2.5"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

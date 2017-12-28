@@ -1,0 +1,8 @@
+.tiles {
+  height: 70px;
+  width: 210px;
+  background: red;
+  float:left;
+  margin: 8px;
+  padding: 6px;
+}
