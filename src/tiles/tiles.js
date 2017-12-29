@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './tiles.css'
 import classNames from "classnames";
 
-const classTyles = classNames('tiles', { bar: false });
-const classTylesFont = classNames('tiles-font', { bar: false });
+const classTyles = classNames('tiles', { green: true, red: false });
+const classTylesFont = classNames('tiles-font');
 
 export default ({ value, unit, description }) => <div className={classTyles}>
   <p className={classTylesFont}>
