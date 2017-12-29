@@ -5,4 +5,17 @@
   float:left;
   margin: 8px;
   padding: 6px;
+background: rgb(255,0,0); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(255,0,0,1) 0%, rgba(102,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(255,0,0,1) 0%,rgba(102,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(255,0,0,1) 0%,rgba(102,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#660000',GradientType=1 ); /* IE6-9 */
+}
+
+.tiles-font {
+ font-family: "Arial, Helvetica, sans-serif";
+ font-size:14px;
+ line-height: 140%;
+ margin-top:12px;
+ margin-left:16px;
 }

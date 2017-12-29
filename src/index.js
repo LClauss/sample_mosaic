@@ -25,7 +25,7 @@ const TITLE_MAP: Record<ViewId, string> = {
 };
 
 const CONTENT_MAP: Record<ViewId, string> = {
-  a: <div><Tiles value='54' /><Tiles value='25' /></div>,
+  a: <div><Tiles value='54' unit='%' description='Mon super texte'/><Tiles value='25' unit='%' /></div>,
   b: 'Top Right Window',
   c: 'Bottom Right Window',
   new: <h1>New Window</h1>
