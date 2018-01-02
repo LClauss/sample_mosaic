@@ -39,7 +39,9 @@ html, body, #rootapp, .react-mosaic-example-app {
  * limitations under the License.
  */
 .mosaic {
-  height: 100%;
+  height: calc( 100% - 72px);
+  position:absolute;
+  top:72px;
   width: 100%;
 }
 .mosaic,
@@ -483,5 +485,54 @@ html, body, #rootapp, .react-mosaic-example-app {
 .mosaic.mosaic-blueprint-theme.pt-dark .mosaic-window .mosaic-preview h4,
 .mosaic.mosaic-blueprint-theme.pt-dark .mosaic-preview .mosaic-preview h4 {
   color: #ebf1f5;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  left: 24px;
+  top: 24px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  overflow: hidden;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=react-mosaic-component.css.map */
