@@ -539,7 +539,6 @@ html, body, #rootapp, .react-mosaic-example-app {
 
 /*# sourceMappingURL=react-mosaic-component.css.map */
 
-.recharts-responsive-container {
-   height: calc(100% - 104px);
-
+.nomulti {
+  display: inline-flex;
 }

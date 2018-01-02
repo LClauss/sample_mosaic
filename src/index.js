@@ -50,7 +50,7 @@ class ViewIdMosaicWindow extends MosaicWindow<ViewId> { }
 const TITLE_MAP: Record<ViewId, string> = {
   a: 'Left Window',
   b: 'Top Right Window',
-  c: 'Bottom Right Window',
+  c: 'Demo Graph with CardTiles',
   new: 'New Window'
 };
 
@@ -65,7 +65,6 @@ const CONTENT_MAP: Record<ViewId, string> = {
   <ResponsiveContainer width="100%" height="100%">
       <ComposedChart data={data} 
     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-    
     <XAxis dataKey="name" />
     <YAxis />
     <CartesianGrid strokeDasharray="3 3" />
