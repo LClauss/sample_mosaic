@@ -7,8 +7,8 @@ const classTylesFont = classNames('tiles-font');
 
 export default ({ value, unit, description }) => <div className={classTyles}>
   <p className={classTylesFont}>
-  <strong><span style={{'font-size':'22px'}}>{value}</span>
-  <span style={{'font-size':'12px'}}>{unit}</span></strong>
+  <strong><span style={{'font-size':'30px'}}>{value}</span>
+  <span style={{'font-size':'14px'}}>{unit}</span></strong>
   <br />
   <span style={{ 'font-size': '16px' }}>
       <font face="Arial, Helvetica, sans-serif">{description}</font>

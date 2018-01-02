@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import {Mosaic, MosaicWindow, Record} from 'react-mosaic-component'
 import classnames from "classnames";
 import Tiles from './tiles/tiles'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
+import { ResponsiveContainer,LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
 
 const data = [
   { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },
@@ -36,7 +36,8 @@ const TITLE_MAP: Record<ViewId, string> = {
 const CONTENT_MAP: Record<ViewId, string> = {
   a: <div><Tiles value='54' unit='%' description='Mon super texte'/><Tiles value='25' unit='%' /></div>,
   b: 'Top Right Window',
-  c: <LineChart width={600} height={300} data={data}
+  c: <ResponsiveContainer width="100%" height="100%">
+    <LineChart data={data}
     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
     <XAxis dataKey="name" />
     <YAxis />
@@ -45,7 +46,8 @@ const CONTENT_MAP: Record<ViewId, string> = {
     <Legend />
     <Line type="monotone" dataKey="pv" stroke="#8884d8"  />
     <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-  </LineChart>,
+    </LineChart>
+  </ResponsiveContainer>,
   new: <h1>New Window</h1>
 };
 

@@ -3,8 +3,9 @@
   width: 210px;
   background: red;
   float:left;
-  margin: 8px;
-  padding: 6px;
+  margin: 6px;
+  padding: 4px;
+  color: #eaeaea;
 }
 
 .red {
