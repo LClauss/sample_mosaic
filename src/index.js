@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import {Mosaic, MosaicWindow, Record} from 'react-mosaic-component'
 import classnames from "classnames";
 import Tiles from './tiles/tiles'
-import { ResponsiveContainer,LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
+import { ResponsiveContainer, Area, LineChart, ComposedChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
 
 const data = [
   { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },
@@ -34,20 +34,26 @@ const TITLE_MAP: Record<ViewId, string> = {
 };
 
 const CONTENT_MAP: Record<ViewId, string> = {
-  a: <div><Tiles value='54' unit='%' description='Mon super texte'/><Tiles value='25' unit='%' /></div>,
+  a: <div></div>,
   b: 'Top Right Window',
-  c: <ResponsiveContainer width="100%" height="100%">
-    <LineChart data={data}
+  c: <div style={{height:"100%",width:"100%"}}>
+    <div><Tiles value='+54' unit='%' description='+ skins green' />
+          <Tiles value='54' unit='%' description='no sign is blue' />    
+          <Tiles value='-25' unit='%' description='-  skins red'  />
+    </div>  
+  <ResponsiveContainer width="100%" height="80%">
+   <ComposedChart data={data}
     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+    
     <XAxis dataKey="name" />
     <YAxis />
     <CartesianGrid strokeDasharray="3 3" />
     <Tooltip />
     <Legend />
-    <Line type="monotone" dataKey="pv" stroke="#8884d8"  />
+    <Area type='monotone' dataKey='pv' fill='#8884d8' stroke='#8884d8' />    
     <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-    </LineChart>
-  </ResponsiveContainer>,
+    </ComposedChart>
+  </ResponsiveContainer></div>,
   new: <h1>New Window</h1>
 };
 
