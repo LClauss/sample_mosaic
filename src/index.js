@@ -8,40 +8,6 @@ import { ResponsiveContainer, Area, LineChart, ComposedChart, Line, XAxis, YAxis
 
 import { slide as Menu } from 'react-burger-menu'
 
-var burgerstyles = {
-  bmBurgerButton: {
-    position: 'fixed',
-    width: '36px',
-    height: '30px',
-    left: '36px',
-    top: '36px'
-  },
-  bmBurgerBars: {
-    background: '#373a47'
-  },
-  bmCrossButton: {
-    height: '24px',
-    width: '24px'
-  },
-  bmCross: {
-    background: '#bdc3c7'
-  },
-  bmMenu: {
-    background: '#373a47',
-    padding: '2.5em 1.5em 0',
-    fontSize: '1.15em'
-  },
-  bmMorphShape: {
-    fill: '#373a47'
-  },
-  bmItemList: {
-    color: '#b8b7ad',
-    padding: '0.8em'
-  },
-  bmOverlay: {
-    background: 'rgba(0, 0, 0, 0.3)'
-  }
-}
 
 class Example extends React.Component {
   showSettings(event) {
@@ -91,13 +57,13 @@ const TITLE_MAP: Record<ViewId, string> = {
 const CONTENT_MAP: Record<ViewId, string> = {
   a: <div></div>,
   b: 'Top Right Window',
-  c: <div style={{height:"100%",width:"100%"}}>
-    <div><Tiles value='+54' unit='%' description='+ skins green' />
-          <Tiles value='54' unit='%' description='no sign is blue' />    
+  c: <div style={{height:'calc(100% - 104px)',width:"100%"}}>
+    <div className="nomulti"><Tiles value='+54' unit='%' description='+ skins green' />
+          <Tiles value='54' unit='Kg' description='no sign is blue' />    
           <Tiles value='-25' unit='%' description='-  skins red'  />
     </div>  
-  <ResponsiveContainer width="100%" height="80%">
-   <ComposedChart data={data}
+  <ResponsiveContainer width="100%" height="100%">
+      <ComposedChart data={data} 
     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
     
     <XAxis dataKey="name" />
@@ -113,8 +79,8 @@ const CONTENT_MAP: Record<ViewId, string> = {
 };
 
 const RootApp = () => (
-  <div id="outer-container" style={{ height: "100%", width: "100%" }}>
-    <Example style={{ burgerstyles}} pageWrapId={"mosaic"} outerContainerId={"outer-container"}  width={'280px'} />  
+  <div style={{ height: "100%", width: "100%" }}>
+  <Example   width={'280px'} />  
   <ViewIdMosaic id="mosaic"
     renderTile={(id, path) => (
       <ViewIdMosaicWindow

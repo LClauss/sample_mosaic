@@ -5,6 +5,7 @@ html, body, #rootapp, .react-mosaic-example-app {
   width: 100%;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;  
+  background: #C2BFC5;  
 }
 /**
  * @license
@@ -498,7 +499,7 @@ html, body, #rootapp, .react-mosaic-example-app {
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #373a47; 
 }
 
 /* Position and sizing of clickable cross button */
@@ -517,7 +518,6 @@ html, body, #rootapp, .react-mosaic-example-app {
   background: #373a47;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
-  overflow: hidden;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -527,7 +527,7 @@ html, body, #rootapp, .react-mosaic-example-app {
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
+  color: red; /*#b8b7ad; */
   padding: 0.8em;
 }
 
@@ -535,4 +535,11 @@ html, body, #rootapp, .react-mosaic-example-app {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+
 /*# sourceMappingURL=react-mosaic-component.css.map */
+
+.recharts-responsive-container {
+   height: calc(100% - 104px);
+
+}
