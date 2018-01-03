@@ -4,9 +4,10 @@ import { render } from 'react-dom';
 import {Mosaic, MosaicWindow, Record} from 'react-mosaic-component'
 import classnames from "classnames";
 import Tiles from './tiles/tiles'
-import { ResponsiveContainer, Area, LineChart, ComposedChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
+import { ResponsiveContainer, Area, LineChart, ComposedChart, Line, XAxis, YAxis, CartesianGrid, CartesianAxis, Tooltip, Legend } from 'recharts'
 
 import CustomDot from './rechart/CustomDot.js'
+import CustomActivDot from './rechart/CustomActivDot.js'
 
 import { slide as Menu } from 'react-burger-menu'
 
@@ -67,13 +68,19 @@ const CONTENT_MAP: Record<ViewId, string> = {
   <ResponsiveContainer width="100%" height="100%">
       <ComposedChart data={data} 
     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+    <defs>
+        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#4D4E94" stopOpacity={0.9} />
+            <stop offset="95%" stopColor="#DCE2EE" stopOpacity={0.5} />
+        </linearGradient>    
+    </defs>
     <XAxis dataKey="name" />
     <YAxis />
-    <CartesianGrid strokeDasharray="3 3" />
-    <Tooltip />
+    <CartesianAxis interval={1} />
+    <Tooltip dot={false} cursor={false}/>
     <Legend />
-    <Area type='monotone' dataKey='pv' fill='#DFDDEA' stroke='#4D4E94' strokeWidth={4} dot={<CustomDot />}   />    
-    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+    <Area type='monotone' dataKey='pv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />}   />    
+    <Line type="monotone" dataKey="uv" stroke="#82ca9d" dot={false} />
     </ComposedChart>
   </ResponsiveContainer></div>,
   new: <h1>New Window</h1>
