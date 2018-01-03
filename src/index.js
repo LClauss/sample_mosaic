@@ -80,7 +80,8 @@ const CONTENT_MAP: Record<ViewId, string> = {
     <Tooltip dot={false} cursor={false}/>
     <Legend />
     <Area type='monotone' dataKey='pv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />}   />    
-    <Line type="monotone" dataKey="uv" stroke="#82ca9d" dot={false} />
+    <Area type='monotone' dataKey='uv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />} />    
+
     </ComposedChart>
   </ResponsiveContainer></div>,
   new: <h1>New Window</h1>
