@@ -6,6 +6,8 @@ import classnames from "classnames";
 import Tiles from './tiles/tiles'
 import { ResponsiveContainer, Area, LineChart, ComposedChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
 
+import CustomDot from './rechart/CustomDot.js'
+
 import { slide as Menu } from 'react-burger-menu'
 
 
@@ -57,7 +59,7 @@ const TITLE_MAP: Record<ViewId, string> = {
 const CONTENT_MAP: Record<ViewId, string> = {
   a: <div></div>,
   b: 'Top Right Window',
-  c: <div style={{height:'calc(100% - 120px)',width:"100%"}}>
+  c: <div style={{height:'calc(100% - 144px)',width:"100%"}}>
     <div className="nomulti"><Tiles value='+54' unit='%' description='+ skins green' />
           <Tiles value='54' unit='Kg' description='no sign is blue' />    
           <Tiles value='-25' unit='%' description='-  skins red'  />
@@ -70,7 +72,7 @@ const CONTENT_MAP: Record<ViewId, string> = {
     <CartesianGrid strokeDasharray="3 3" />
     <Tooltip />
     <Legend />
-    <Area type='monotone' dataKey='pv' fill='#8884d8' stroke='#8884d8' />    
+    <Area type='monotone' dataKey='pv' fill='#DFDDEA' stroke='#4D4E94' strokeWidth={4} dot={<CustomDot />}   />    
     <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
     </ComposedChart>
   </ResponsiveContainer></div>,
