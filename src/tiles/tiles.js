@@ -19,12 +19,16 @@ export default ( props: myprops ) => {
 
   return <div className={classTyles}>
   <p className={classTylesFont}>
-      <strong><span style={{ 'font-size': '34px' }}>{props.value}</span>
-  <span style={{'font-size':'14px'}}>{props.unit}</span></strong>
-  <br />
-  <span style={{ 'font-size': '16px' }}>
-      <font face="Arial, Helvetica, sans-serif">{props.description}</font>
-    </span>
+      <strong>
+        <span style={{ 'fontSize': '38px' }}>{props.value}</span>
+      </strong>
+        <span style={{'fontSize':'18px'}}>{props.unit}</span>
+      <br />
+      <span style={{ 'fontSize': '20px' }}>
+        {props.description}
+      </span>
   </p>
   </div>
 }
+
+/* <font face="Arial, Helvetica, sans-serif">{props.description}</font> */

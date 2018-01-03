@@ -48,7 +48,7 @@ class ViewIdMosaic extends Mosaic<ViewId> { }
 class ViewIdMosaicWindow extends MosaicWindow<ViewId> { }
 
 const TITLE_MAP: Record<ViewId, string> = {
-  a: 'Left Window',
+  a: 'Leeesdfsdfgsdfgsfdgeft Window',
   b: 'Top Right Window',
   c: 'Demo Graph with CardTiles',
   new: 'New Window'
@@ -57,7 +57,7 @@ const TITLE_MAP: Record<ViewId, string> = {
 const CONTENT_MAP: Record<ViewId, string> = {
   a: <div></div>,
   b: 'Top Right Window',
-  c: <div style={{height:'calc(100% - 104px)',width:"100%"}}>
+  c: <div style={{height:'calc(100% - 120px)',width:"100%"}}>
     <div className="nomulti"><Tiles value='+54' unit='%' description='+ skins green' />
           <Tiles value='54' unit='Kg' description='no sign is blue' />    
           <Tiles value='-25' unit='%' description='-  skins red'  />
@@ -79,24 +79,24 @@ const CONTENT_MAP: Record<ViewId, string> = {
 
 const RootApp = () => (
   <div style={{ height: "100%", width: "100%" }}>
-  <Example   width={'280px'} />  
-  <ViewIdMosaic id="mosaic"
+    <Example   width={'280px'} />  
+    <ViewIdMosaic id="mosaic"
     renderTile={(id, path) => (
       <ViewIdMosaicWindow
         path={path}
         createNode={() => 'new'}
         title={TITLE_MAP[id]}
       >
-    {CONTENT_MAP[id]}
-      </ViewIdMosaicWindow>
+      {CONTENT_MAP[id]}
+    </ViewIdMosaicWindow>
     )}
     initialValue={{
-      direction: 'row',
-      first: 'a',
+      direction: 'column',
+      first: 'c',
       second: {
-        direction: 'column',
-        first: 'b',
-        second: 'c'
+        direction: 'row',
+        first: 'a',
+        second: 'b'
       }
     }}
   />

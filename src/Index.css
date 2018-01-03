@@ -540,5 +540,6 @@ html, body, #rootapp, .react-mosaic-example-app {
 /*# sourceMappingURL=react-mosaic-component.css.map */
 
 .nomulti {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
 }
