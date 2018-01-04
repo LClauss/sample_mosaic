@@ -4,19 +4,34 @@
   /*margin: 20px;
   padding: 18px;*/
   color: #fffffe;
-  display: inline-block;  
+  /*display: inline-block;  */
   flex-shrink: 0;  
+  
   /* background-repeat: no-repeat, repeat;
   background-position: 50% 50%;  */
   /*font-family: 'Montserrat', sans-serif; */
 }
+dl {
+  line-height: 0.1em;
+}
+dl dt {
+  margin-left: 15px;
+  margin-top: 7px;
+}
+dl dd {
+    margin-left: 15px;
+    padding-top: 20px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
 
 .red {
 /* http://www.colorzilla.com/gradient-editor/#cd4345+0,e36767+100 */  
 background: #c65555;
 background: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#fff' fill-opacity='0.15' width='104' height='104'><circle cx='52' cy='52' r='50' /></svg>"), -moz-linear-gradient(left, #c65555 0%, #d30a0a 100%);
 background: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#fff' fill-opacity='0.15' width='104' height='104'><circle cx='52' cy='52' r='50' /></svg>"), -webkit-linear-gradient(left, #c65555 0%,#d30a0a 100%);
-background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2750%27%20%2F%3E%3C%2Fsvg%3E"), linear-gradient(117deg, #C0504D 0%, #C00000 100%);
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2724%27%20%2F%3E%3C%2Fsvg%3E"), linear-gradient(117deg, #C0504D 0%, #C00000 100%);
 /* background: linear-gradient(117deg, #C0504D 0%, #C00000 100%); */
 box-shadow: 2px 0 0 NaNpx #814444;
 
@@ -38,8 +53,9 @@ background-size: auto auto;
 background: rgb(147,189,71);
 background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg' fill='#fff' fill-opacity='0.15' width='104' height='104'%3E%3Ccircle cx='52' cy='52' r='50' /%3E%3C/svg%3E"), -moz-linear-gradient(left, rgba(147,189,71,1) 0%, rgba(112,150,39,1) 100%);
 background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg' fill='#fff' fill-opacity='0.15' width='104' height='104'%3E%3Ccircle cx='52' cy='52' r='50' /%3E%3C/svg%3E"), -webkit-linear-gradient(left, rgba(147,189,71,1) 0%,rgba(112,150,39,1) 100%);
-background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg' fill='#fff' fill-opacity='0.15' width='104' height='104'%3E%3Ccircle cx='52' cy='52' r='50' /%3E%3C/svg%3E"), linear-gradient(117deg, #83A5D3 0%, #5A87C5 100%);
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2724%27%20%2F%3E%3C%2Fsvg%3E"), linear-gradient(117deg, #9BBB59 0%, #77933C 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93bd47', endColorstr='#709627',GradientType=1 );  
+box-shadow: 2px 0 0 NaNpx #814444;
   background-repeat: no-repeat;
   background-position: 100% 50%;
   -webkit-background-origin: padding-box;
@@ -56,7 +72,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93bd47', end
 background: rgb(127,154,216);
 background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2750%27%20%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(left, rgba(127,154,216,1) 0%, rgba(85,140,203,1) 100%);
 background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2750%27%20%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(left, rgba(127,154,216,1) 0%,rgba(85,140,203,1) 100%);
-background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2750%27%20%2F%3E%3C%2Fsvg%3E"),  linear-gradient(90deg, rgba(109,179,242,1) 0%, rgba(30,105,222,1) 100%), #3498db;
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2724%27%20%2F%3E%3C%2Fsvg%3E"),linear-gradient(117deg, #83A5D3 0%, #5A87C5 100%);
 
  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f9ad8', endColorstr='#558ccb',GradientType=1 );
   background-repeat: no-repeat;
@@ -70,13 +86,11 @@ background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%
 }
 
 .tiles-font {
- /*line-height: 140%;
- margin-top:12px;
- margin-left:16px; */
-
-font-size: 30px;
-font-weight: 600;
-line-height: 37px; 
+    margin-left: 20px;
+    padding-top: 15px;
+    font-size: 30px;
+    font-weight: 600;
 }
+
 
 

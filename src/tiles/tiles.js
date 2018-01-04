@@ -12,21 +12,16 @@ interface myprops {
 }
 
 export default ( props: myprops ) => {
-  var isgreen = props.value.charAt(0) === '+';
-  var isred = props.value.charAt(0) === '-';
+  var firstChar = props.value.charAt(0);
+  var isgreen = firstChar  === '+';
+  var isred = firstChar === '-';
   var isblue = !(isgreen | isred);
-  var classTyles = classNames('tiles', { blue: isblue,  green: isgreen, red: isred  });  
+  var classTyles = classNames('tiles', { 'tiles-font': true, blue: isblue,  green: isgreen, red: isred  });  
 
-  return <div className={classTyles}>
-  <p className={classTylesFont}>
-        <span>{props.value}</span>
-        <span style={{'fontSize':'18px'}}>{props.unit}</span>
-      <br />
-      <span style={{ 'fontSize': '20px' }}>
-        {props.description}
-      </span>
-  </p>
-  </div>
+  return <dl className={classTyles}>
+    <dt>{props.value}<font size="4">{props.unit}</font></dt>
+    <dd>{props.description}</dd>
+  </dl>
 }
 
 /* <font face="Arial, Helvetica, sans-serif">{props.description}</font> */

@@ -58,8 +58,7 @@ const TITLE_MAP: Record<ViewId, string> = {
 };
 
 const CONTENT_MAP: Record<ViewId, string> = {
-  a: <div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499 499" preserveAspectRatio="xMidYMid meet">
+  a: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499 499" preserveAspectRatio="xMidYMid meet">
       <title>SVG curve</title>
       <desc>example curves in SVG</desc>
       <g id="main">
@@ -74,9 +73,8 @@ const CONTENT_MAP: Record<ViewId, string> = {
 
         <path id="curve" d="M100,300 C100,200 302,300 300,100" className="" />
       </g>
-    </svg>  
-  </div>,
-  b: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499 499" preserveAspectRatio="xMidYMid meet">
+    </svg>,
+    b: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499 499" preserveAspectRatio="xMidYMid meet">
     <title>SVG curve</title>
     <desc>example curves in SVG</desc>
     <g id="main">
@@ -91,7 +89,7 @@ const CONTENT_MAP: Record<ViewId, string> = {
       <path id="curve" d="M100,250 Q250,100 400,250" className=""/>
     </g>
   </svg>,
-  c: <div style={{height:'calc(100% - 144px)',width:"100%"}}>
+  c: <div style={{height:'calc(100% - 75px)',width:"100%"}}>
     <div className="nomulti"><Tiles value='+54' unit='%' description='+ skins green' />
           <Tiles value='54' unit='Kg' description='no sign is blue' />    
           <Tiles value='-25' unit='%' description='-  skins red'  />
