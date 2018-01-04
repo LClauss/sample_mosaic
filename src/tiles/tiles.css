@@ -29,7 +29,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c65555', end
 }
 .green {
 /* encode the svg : https://meyerweb.com/eric/tools/dencoder/ */
-/* use charset=ut8 instead of utf8 */
+/* use charset=ut8 instead of utf8 https://stackoverflow.com/questions/32870788/css-using-raw-svg-in-the-url-parameter-of-a-background-image-in-ie */
 /* http://www.colorzilla.com/gradient-editor/#93bd47+0,709627+100  */
 background: rgb(147,189,71);
 background: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#fff' fill-opacity='0.15' width='104' height='104'><circle cx='52' cy='52' r='50' /></svg>"), -moz-linear-gradient(left, rgba(147,189,71,1) 0%, rgba(112,150,39,1) 100%);
