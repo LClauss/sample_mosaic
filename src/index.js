@@ -51,15 +51,46 @@ class ViewIdMosaic extends Mosaic<ViewId> { }
 class ViewIdMosaicWindow extends MosaicWindow<ViewId> { }
 
 const TITLE_MAP: Record<ViewId, string> = {
-  a: 'Leeesdfsdfgsdfgsfdgeft Window',
-  b: 'Top Right Window',
+  a: 'BiCubic bézier curve',
+  b: 'Quadradic Bézier curve',
   c: 'Demo Graph with CardTiles',
   new: 'New Window'
 };
 
 const CONTENT_MAP: Record<ViewId, string> = {
-  a: <div></div>,
-  b: 'Top Right Window',
+  a: <div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499 499" preserveAspectRatio="xMidYMid meet">
+      <title>SVG curve</title>
+      <desc>example curves in SVG</desc>
+      <g id="main">
+        <circle id="p1" cx="100" cy="300" r="16" />
+        <circle id="p2" cx="300" cy="100" r="16" />
+
+        <circle id="c1" cx="100" cy="200" r="8" />
+        <circle id="c2" cx="302" cy="300" r="8" />
+
+        <line id="l1" x1="100" y1="300" x2="100" y2="200" />
+        <line id="l2" x1="300" y1="100" x2="302" y2="300" />
+
+        <path id="curve" d="M100,300 C100,200 302,300 300,100" class="" />
+      </g>
+    </svg>  
+  </div>,
+  b: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499 499" preserveAspectRatio="xMidYMid meet">
+    <title>SVG curve</title>
+    <desc>example curves in SVG</desc>
+    <g id="main">
+      <circle id="p1" cx="100" cy="250" r="16" />
+      <circle id="p2" cx="400" cy="250" r="16" />
+
+      <circle id="c1" cx="250" cy="100" r="8" />
+
+      <line id="l1" x1="100" y1="250" x2="250" y2="100" />
+      <line id="l2" x1="400" y1="250" x2="250" y2="100" />
+
+      <path id="curve" d="M100,250 Q250,100 400,250" />
+    </g>
+  </svg>,
   c: <div style={{height:'calc(100% - 144px)',width:"100%"}}>
     <div className="nomulti"><Tiles value='+54' unit='%' description='+ skins green' />
           <Tiles value='54' unit='Kg' description='no sign is blue' />    
@@ -67,21 +98,20 @@ const CONTENT_MAP: Record<ViewId, string> = {
     </div>  
   <ResponsiveContainer width="100%" height="100%">
       <ComposedChart data={data} 
-    margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-    <defs>
+                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+      <defs>
         <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#4D4E94" stopOpacity={0.9} />
             <stop offset="95%" stopColor="#DCE2EE" stopOpacity={0.5} />
         </linearGradient>    
-    </defs>
-    <XAxis dataKey="name" />
-    <YAxis />
-    <CartesianAxis interval={1} />
-    <Tooltip dot={false} cursor={false}/>
-    <Legend />
-    <Area type='monotone' dataKey='pv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />}   />    
-    <Area type='monotone' dataKey='uv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />} />    
-
+      </defs>
+      <XAxis dataKey="name" />
+      <YAxis />
+      <CartesianAxis interval={1} />
+      <Tooltip dot={false} cursor={false}/>
+      <Legend />
+      <Area type='monotone' dataKey='pv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />}   />    
+      <Area type='monotone' dataKey='uv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />} />    
     </ComposedChart>
   </ResponsiveContainer></div>,
   new: <h1>New Window</h1>
