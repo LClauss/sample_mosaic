@@ -105,6 +105,7 @@ const CONTENT_MAP: Record<ViewId, string> = {
             <stop offset="95%" stopColor="#DCE2EE" stopOpacity={0.5} />
         </linearGradient>    
       </defs>
+        <circle id="p1" fill="red" cx="100" cy="250" r="16" />      
       <XAxis dataKey="name" />
       <YAxis />
       <CartesianAxis interval={1} />
