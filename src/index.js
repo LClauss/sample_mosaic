@@ -72,7 +72,7 @@ const CONTENT_MAP: Record<ViewId, string> = {
         <line id="l1" x1="100" y1="300" x2="100" y2="200" />
         <line id="l2" x1="300" y1="100" x2="302" y2="300" />
 
-        <path id="curve" d="M100,300 C100,200 302,300 300,100" class="" />
+        <path id="curve" d="M100,300 C100,200 302,300 300,100" className="" />
       </g>
     </svg>  
   </div>,
@@ -88,7 +88,7 @@ const CONTENT_MAP: Record<ViewId, string> = {
       <line id="l1" x1="100" y1="250" x2="250" y2="100" />
       <line id="l2" x1="400" y1="250" x2="250" y2="100" />
 
-      <path id="curve" d="M100,250 Q250,100 400,250" />
+      <path id="curve" d="M100,250 Q250,100 400,250" className=""/>
     </g>
   </svg>,
   c: <div style={{height:'calc(100% - 144px)',width:"100%"}}>
