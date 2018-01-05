@@ -7,7 +7,11 @@ html, body {
   overflow: hidden;
   font-family: 'Open Sans', sans-serif; 
   background: #C2BFC5;  
-
+  /*
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  -webkit-text-stroke: 0.7px;  
+  */
 }
 nav {
   margin: 0;

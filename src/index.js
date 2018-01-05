@@ -3,7 +3,7 @@ import './Index.css';
 import { render } from 'react-dom';
 import {Mosaic, MosaicWindow, Record} from 'react-mosaic-component'
 import classnames from "classnames";
-import Tiles from './tiles/tiles'
+import Cardtiles from './CardTiles/cardtiles'
 import { ResponsiveContainer, Area, LineChart, ComposedChart, Line, XAxis, YAxis, CartesianGrid, CartesianAxis, Tooltip, Legend } from 'recharts'
 
 import CustomDot from './rechart/CustomDot.js'
@@ -58,7 +58,7 @@ const TITLE_MAP: Record<ViewId, string> = {
 };
 
 const CONTENT_MAP: Record<ViewId, string> = {
-  a: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499 499" preserveAspectRatio="xMidYMid meet">
+  a: <svg xmlns="http://www.w3.org/2000/svg" style={{width:"100%"}} viewBox="0 0 499 499" preserveAspectRatio="xMidYMid meet">
       <title>SVG curve</title>
       <desc>example curves in SVG</desc>
       <g id="main">
@@ -89,14 +89,14 @@ const CONTENT_MAP: Record<ViewId, string> = {
       <path id="curve" d="M100,250 Q250,100 400,250" className=""/>
     </g>
   </svg>,
-  c: <div style={{height:'calc(100% - 75px)',width:"100%"}}>
-    <div className="nomulti"><Tiles value='+54' unit='%' description='+ skins green' />
-          <Tiles value='54' unit='Kg' description='no sign is blue' />    
-          <Tiles value='-25' unit='%' description='-  skins red'  />
+  c: <div style={{height:'calc(100% - 105px)',width:"100%"}}>
+    <div className="nomulti">
+      <Cardtiles value='+54' unit='%' description='+ skins green' />
+      <Cardtiles value='54' unit='Kg' description='no sign is blue' />    
+      <Cardtiles value='-25' unit='%' description='-  skins red'  />
     </div>  
   <ResponsiveContainer width="100%" height="100%">
-      <ComposedChart data={data} 
-                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+      <ComposedChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
       <defs>
         <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#4D4E94" stopOpacity={0.9} />
@@ -109,8 +109,8 @@ const CONTENT_MAP: Record<ViewId, string> = {
       <CartesianAxis interval={1} />
       <Tooltip dot={false} cursor={false}/>
       <Legend />
-      <Area type='monotone' dataKey='pv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />}   />    
-      <Area type='monotone' dataKey='uv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />} />    
+      <Area type='monotone' dataKey='pv' fill="#E0DDE7" fillOpacity={.7} stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />}   />    
+      <Area type='monotone' dataKey='uv' fill="#E0DDE7" fillOpacity={.7} stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />} />    
     </ComposedChart>
   </ResponsiveContainer></div>,
   new: <h1>New Window</h1>
@@ -144,3 +144,6 @@ const RootApp = () => (
 
 
 render(<RootApp />, document.getElementById('rootapp'));
+
+
+/*<Area type='monotone' dataKey='uv' fill="url(#colorPv)" stroke='#4D4E94' strokeWidth={4} activeDot={<CustomActivDot />} dot={<CustomDot />} />  */

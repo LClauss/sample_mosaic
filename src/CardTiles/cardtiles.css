@@ -1,0 +1,89 @@
+.tiles {
+  height: 73px;
+  width: 177px;
+  color: #fffffe;
+  flex-shrink: 0;  
+}
+
+.tiles-value {
+  font-size: 30px;
+  font-weight: 600;
+}
+.tiles-unit {
+  font-size: 16px;
+  font-weight: normal;
+}
+.tiles-description {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.tiles-red {
+/* http://www.colorzilla.com/gradient-editor/#cd4345+0,e36767+100 */  
+background: #C0504D;
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2724%27%20%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(117deg, #C0504D 0%, #C00000 100%);
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2724%27%20%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(117deg, #C0504D 0%, #C00000 100%);
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2724%27%20%2F%3E%3C%2Fsvg%3E"), linear-gradient(117deg, #C0504D 0%, #C00000 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C0504D', endColorstr='#C00000',GradientType=1 );
+
+box-shadow: 2px 0 0 NaNpx #814444;
+background-repeat: no-repeat;
+background-position: 100% 50%;
+-webkit-background-origin: padding-box;
+-webkit-background-clip: border-box;
+-webkit-background-size: auto auto;
+background-origin: padding-box;
+background-clip: border-box;
+background-size: auto auto;
+}
+.tiles-green {
+/* encode the svg : https://meyerweb.com/eric/tools/dencoder/ */
+/* use charset=ut8 instead of utf8 https://stackoverflow.com/questions/32870788/css-using-raw-svg-in-the-url-parameter-of-a-background-image-in-ie */
+/* http://www.colorzilla.com/gradient-editor/#93bd47+0,709627+100  */
+/* semi encoded svg changed only < > */
+
+background: #9BBB59;
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg' fill='#fff' fill-opacity='0.15' width='104' height='104'%3E%3Ccircle cx='52' cy='52' r='50' /%3E%3C/svg%3E"), -moz-linear-gradient(117deg, #9BBB59 0%, #77933C 100%);
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg' fill='#fff' fill-opacity='0.15' width='104' height='104'%3E%3Ccircle cx='52' cy='52' r='50' /%3E%3C/svg%3E"), -webkit-linear-gradient(117deg, #9BBB59 0%, #77933C 100%);
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2724%27%20%2F%3E%3C%2Fsvg%3E"), linear-gradient(117deg, #9BBB59 0%, #77933C 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9BBB59', endColorstr='#77933C',GradientType=1 );  
+
+box-shadow: 2px 0 0 NaNpx #814444;
+background-repeat: no-repeat;
+background-position: 100% 50%;
+-webkit-background-origin: padding-box;
+-webkit-background-clip: border-box;
+-webkit-background-size: auto auto;
+background-origin: padding-box;
+background-clip: border-box;
+background-size: auto auto;
+}
+.tiles-blue {
+/* http://www.colorzilla.com/gradient-editor/#7f9ad8+0,558ccb+100 */
+/* full encoded svg replacing all special char's */
+background: #83A5D3;
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2750%27%20%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(left, rgba(127,154,216,1) 0%, rgba(85,140,203,1) 100%);
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%3Ccircle%20cx%3D%2752%27%20cy%3D%2752%27%20r%3D%2750%27%20%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(left, rgba(127,154,216,1) 0%,rgba(85,140,203,1) 100%);
+background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20fill%3D%27%23fff%27%20fill-opacity%3D%270.15%27%20width%3D%27104%27%20height%3D%27104%27%3E%20%3Cpath%20d%3D%22m28.25913%2C42.23551c5.52379%2C10.12978%206.60217%2C13.20605%204.77581%2C13.62382c-3.56768%2C0.8161%20-2.85075%2C5.48351%202.14282%2C13.95027c6.26246%2C10.61824%2018.52871%2C17.13881%2030.0505%2C15.97444c4.47209%2C-0.45195%209.52799%2C-1.38465%2011.23533%2C-2.07271c1.70733%2C-0.68807%200.65965%2C0.59372%20-2.32819%2C2.8484c-14.94689%2C11.27917%20-33.40695%2C10.49348%20-48.13408%2C-2.04864c-5.87198%2C-5.0008%20-13.95091%2C-19.61173%20-13.95091%2C-25.23058c0%2C-1.59178%20-1.33194%2C-3.13415%20-2.95986%2C-3.42748c-2.66228%2C-0.4797%20-2.30475%2C-1.74276%203.55613%2C-12.56288c3.5838%2C-6.61627%206.95735%2C-12.50416%207.49679%2C-13.08421c0.53945%2C-0.58005%204.19149%2C4.83326%208.11566%2C12.02957l0%2C0zm47.48174%2C19.52896c-5.52379%2C-10.12977%20-6.60217%2C-13.20606%20-4.77582%2C-13.62382c3.56768%2C-0.81609%202.85075%2C-5.48351%20-2.14281%2C-13.95027c-6.26247%2C-10.61825%20-18.52873%2C-17.13882%20-30.05051%2C-15.97444c-4.47209%2C0.45194%20-9.52798%2C1.38467%20-11.23532%2C2.07273c-1.70734%2C0.68805%20-0.65965%2C-0.59373%202.32819%2C-2.84841c14.94689%2C-11.27917%2033.40696%2C-10.49349%2048.13408%2C2.04864c5.87198%2C5.00078%2013.95091%2C19.61173%2013.95091%2C25.23056c0%2C1.59179%201.33195%2C3.13415%202.95985%2C3.42748c2.66229%2C0.47971%202.30475%2C1.74276%20-3.55612%2C12.56289c-3.5838%2C6.61626%20-6.95736%2C12.50415%20-7.49679%2C13.08421c-0.53945%2C0.58005%20-4.19149%2C-4.83325%20-8.11566%2C-12.02956l0%2C0l0%2C-0.00001z%22%20%2F%3E%3C%2Fsvg%3E"),linear-gradient(117deg, #83A5D3 0%, #5A87C5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83A5D3', endColorstr='#5A87C5',GradientType=1 );
+
+box-shadow: 2px 0 0 NaNpx #814444;
+background-repeat: no-repeat;
+background-position: 100% 50%;
+-webkit-background-origin: padding-box;
+-webkit-background-clip: border-box;
+-webkit-background-size: auto auto;
+background-origin: padding-box;
+background-clip: border-box;
+background-size: auto auto;
+
+}
+
+.tiles-font {
+    margin-left: 20px;
+    padding-left: 15px;
+    /*padding-top: 15px; */
+}
+
+
+
